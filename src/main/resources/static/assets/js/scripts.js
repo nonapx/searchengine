@@ -1472,9 +1472,9 @@ var API = function(){
                     }
                 } else {
                     if ($this.next('.API-error').length) {
-                        $this.next('.API-error').text(result.error);
+                        $this.next('.API-error').text(result.message);
                     } else {
-                        $this.after('<div class="API-error">' + result.error + '</div>');
+                        $this.after('<div class="API-error">' + result.message + '</div>');
                     }
                 }
             }
@@ -1492,9 +1492,9 @@ var API = function(){
                     }
                 } else {
                     if ($this.next('.API-error').length) {
-                        $this.next('.API-error').text(result.error);
+                        $this.next('.API-error').text(result.message);
                     } else {
-                        $this.after('<div class="API-error">' + result.error + '</div>');
+                        $this.after('<div class="API-error">' + result.message + '</div>');
                     }
                 }
             }
@@ -1517,9 +1517,9 @@ var API = function(){
                         $this.next('.API-success').remove();
                     }
                     if ($this.next('.API-error').length) {
-                        $this.next('.API-error').text(result.error);
+                        $this.next('.API-error').text(result.message);
                     } else {
-                        $this.after('<div class="API-error">' + result.error + '</div>');
+                        $this.after('<div class="API-error">' + result.message + '</div>');
                     }
                 }
             }
@@ -1566,9 +1566,9 @@ var API = function(){
                     
                 } else {
                     if ($this.next('.API-error').length) {
-                        $this.next('.API-error').text(result.error);
+                        $this.next('.API-error').text(result.message);
                     } else {
-                        $this.after('<div class="API-error">' + result.error + '</div>');
+                        $this.after('<div class="API-error">' + result.message + '</div>');
                     }
                 }
             }
@@ -1648,7 +1648,7 @@ var API = function(){
                             $this.removeClass('Tabs-block_update')
                         });
                     });
-                    if (result.statistics.total.isIndexing) {
+                    if (result.statistics.total.indexing) {
                         var $btnIndex = $('.btn[data-send="startIndexing"]'),
                             text = $btnIndex.find('.btn-content').text();
                         $btnIndex.find('.btn-content').text($btnIndex.data('alttext'));
@@ -1663,9 +1663,9 @@ var API = function(){
     
                 } else {
                     if ($this.next('.API-error').length) {
-                        $this.next('.API-error').text(result.error);
+                        $this.next('.API-error').text(result.message);
                     } else {
-                        $this.after('<div class="API-error">' + result.error + '</div>');
+                        $this.after('<div class="API-error">' + result.message + '</div>');
                     }
                 }
                 $('.Site-loader').hide(0);

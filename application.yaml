@@ -1,0 +1,32 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    username: avp
+    password: 12345678
+    url: jdbc:mysql://localhost:3306/search_engine?useSSL=false&requireSSL=false&allowPublicKeyRetrieval=true
+  jpa:
+    show-sql: false
+    generate-ddl: true
+    hibernate:
+      dialect: org.hibernate.dialect.MySQLDialect
+      ddl-auto: update
+      format_sql: true
+      properties:
+        hibernate:
+          format_sql: true
+logging:
+  level:
+    org:
+      hibernate:
+        type: info
+indexing-settings:
+  sites:
+    - url: http://playback.ru/
+      name: PlayBack.ru
+    - url: https://nikoartgallery.com/
+      name: Галерея Нико
+web-client-settings:
+  user-agent: Mozilla/5.0 (Windows; U; WindowsNT 5.1; en-US; rv1.8.1.6) Gecko/20070725 Firefox/2.0.0.6
+  referrer: https://www.ya.ru
+  timeout: 150
